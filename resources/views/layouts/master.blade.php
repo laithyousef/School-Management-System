@@ -35,6 +35,7 @@
         <div class="content-wrapper">
 
             @yield('page-header')
+            @include('layouts.messages')
 
             @yield('content')
 
@@ -43,7 +44,6 @@
 
             <!--=================================
  footer -->
-
             @include('layouts.footer')
         </div><!-- main content wrapper end-->
     </div>

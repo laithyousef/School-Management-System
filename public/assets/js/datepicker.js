@@ -13,8 +13,10 @@ NOTE:
 // Line Stacked
 
     $('.date-picker-default').datepicker({
-        format: 'mm-dd-yyyy',
+        format: 'yyyy-mm-dd',
         autoclose: true,
+        clearBtn: true,
+        todayHighlight: true,
         orientation: "bottom",
         templates: {
             leftArrow: '<i class="fa fa-angle-left"></i>',

@@ -2,8 +2,46 @@
 
 return [
 
-    'Dashboard' => 'Dashboard',
+    'Dashboard'=>'Dashboard',
+    'Dashboard_page'=>'Dashboard',
+    'Main_title' => 'MoraSoft School Management Program',
+    'Programname' => ' School Management system',
+    'change_language'=>'language',
+    'Grades'=>'Grades',
+    'Grades_list'=>'Grades List',
+    'classes'=>'Classes',
+    'List_classes' => 'List Classes',
+    'sections'=>'Sections',
+    'List_sections'=>'List Sections',
+    'students'=>'Students',
+    'add_student'=>'Add student',
+    'list_students'=>'Students list',
+    'Students_Promotions'=>'Students Promotions',
+    'add_Promotion'=>'Add Promotion',
+    'list_Promotions' => 'Promotions List',
+    'Student_information'=>'Students Information',
+    'Students_upgrade'=>'Students Upgrade',
+    'Graduate_students'=>'Graduate Students',
+    'add_Graduate'=>'add graduating student',
+    'list_Graduate'=>'Graduating List',
+    'Teachers'=>'Teachers',
+    'List_Teachers' => 'List Teachers',
+    'Parents'=>'Parents',
+    'Add_Parent'=>'Add Parent',
+    'List_Parents'=>'List Parents',
+    'Accounts'=>'Accounts',
+    'Attendance'=>'Attendance',
+    'Subjects' => 'Subjects',
+    'Subjects_List' => 'Subjects List',
+    'Exams'=>'Exams',
+    'library'=>'Library',
+    'Onlineclasses'=>'Online classes',
+    'Settings'=>'Settings',
+    'Users'=>'Users',
+    'Copyright' => 'Copyright',
+    'Name_Programer' => 'SamirGamal MoraSoft All Rights Reserved',
+    'Processes' => 'Processes',
+    
+
 
 ];
-
-?>

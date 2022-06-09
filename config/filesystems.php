@@ -36,6 +36,18 @@ return [
             'throw' => false,
         ],
 
+        'parent_attachments' => [
+            'driver' => 'local',
+            'root' => storage_path('app/parent_attachments'),
+            'throw' => false,
+        ],
+
+        'upload_attachments' => [
+            'driver' => 'local',
+            'root' => public_path('/'),
+            'throw' => false,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
