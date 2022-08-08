@@ -22,7 +22,7 @@ Route::group(
 
     //==============================dashboard============================
     Route::get('/parent/dashboard', function () {
-        return view('livewire.dashboard');
-    });
+        return view('pages.parents.dashboard');
+    })->name('parents.dashboard');
 
 });

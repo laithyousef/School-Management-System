@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Teachers\dashboard;
 
 use App\Models\Quiz;
 use App\Models\Grade;
+use App\Models\Degree;
 use App\Models\Section;
 use App\Models\Subject;
 use App\Models\Teacher;
@@ -151,5 +152,21 @@ class QuizzController extends Controller
 
         return json_encode($sections);
     }
+
+    public function tested_students($quizze_id)
+    {
+        $degrees = Degree::where('quizze_id', $quizze_id)->get();
+
+        return view('pages.teachers.dashboard.quizzes.tested_students', compact('degrees'));
+    }
+
+    public function exam_repetition(Request $request)
+    {
+        Degree::where('student_id', $request->student_id)->where('quizze_id', $request->quizze_id)->delete();
+
+        toastr()->success( trans('quizzes_trans.the_re_examination_has_been_opened_to_the_student'));
+        return redirect()->back();
+    }
+    
     
 }

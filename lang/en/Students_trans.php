@@ -4,6 +4,7 @@ return [
 
     'personal_information' => 'personal information',
     'name' => 'Name',
+    'students' => 'students',
     'name_ar' => 'Name in arabic',
     'name_en' => 'Name in english',
     'email' => 'email',

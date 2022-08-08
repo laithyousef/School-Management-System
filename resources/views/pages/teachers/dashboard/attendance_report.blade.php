@@ -44,8 +44,9 @@
                         </div>
 
                     </div>
-                    <button class="btn btn-success nextBtn btn-lg pull-right" type="submit">{{trans('Students_trans.submit')}}</button>
+                    <button class="btn btn-success nextBtn btn-lg pull-right" type="submit">{{trans('Students_trans.submit')}}</button><br><br>
                 </form>
+                <br>
                 @isset($Students)
                 <div class="table-responsive">
                     <table id="datatable" class="table  table-hover table-sm table-bordered p-0" data-page-length="50"
@@ -56,8 +57,8 @@
                             <th class="alert-success">{{trans('Students_trans.name')}}</th>
                             <th class="alert-success">{{trans('Students_trans.Grade')}}</th>
                             <th class="alert-success">{{trans('Students_trans.section')}}</th>
-                            <th class="alert-success">التاريخ</th>
-                            <th class="alert-warning">الحالة</th>
+                            <th class="alert-success">{{ trans('admin_dashboard_trans.Date_Of_Hiring') }}</th>
+                            <th class="alert-warning">{{ trans('Accounts.Statement') }}</th>
                         </tr>
                         </thead>
                         <tbody>

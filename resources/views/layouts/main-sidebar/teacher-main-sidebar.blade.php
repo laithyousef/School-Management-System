@@ -70,7 +70,7 @@
 
         <!-- الملف الشخصي-->
         <li>
-            <a href="{{route('settings.index')}}"><i class="fas fa-id-card-alt"></i><span
+            <a href="{{route('profile.index')}}"><i class="fas fa-id-card-alt"></i><span
                     class="right-nav-text"> {{ trans('teachers_dahsboard_trans.Personal_file') }}</span></a>
         </li>
 

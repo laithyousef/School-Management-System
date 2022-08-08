@@ -5,6 +5,7 @@ use App\Models\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Teachers\dashboard\QuizzController;
+use App\Http\Controllers\Teachers\dashboard\ProfileController;
 use App\Http\Controllers\Teachers\dashboard\QuestionController;
 use App\Http\Controllers\Teachers\dashboard\OnlineZoomClassController;
 use App\Http\Controllers\Teachers\dashboard\AttendenceReportController;
@@ -50,7 +51,10 @@ Route::group(
      Route::resource('online_zoom_classes', OnlineZoomClassController::class );
      Route::get('/indirect', [OnlineZoomClassController::class, 'create_indirect'])->name('indirect.teacher.create');
      Route::post('/indirect', [OnlineZoomClassController::class, 'store_indirect'])->name('indirect.teacher.store');
-
+     Route::get('profile', [ProfileController::class, 'index'])->name('profile.index');   
+     Route::post('profile/{id}',[ ProfileController::class, 'update'])->name('profile.update');
+     Route::get('tested_students/{id}', [QuizzController::class ,'tested_students' ])->name('tested_students');
+     Route::post('exam_repetition/{id}', [QuizzController::class ,'exam_repetition' ])->name('exam_repetition');
 
 
 

@@ -21,7 +21,7 @@
                     <div class="col-xl-12 mb-30">
                         <div class="card card-statistics h-100">
                             <div class="card-body">
-                                <a href="{{route('question.create')}}" class="btn btn-success " role="button"
+                                <a href="{{route('question.show', 'question')}}" class="btn btn-success " role="button"
                                    aria-pressed="true">{{ trans('question_trans.Add_New_Question') }}</a><br><br>
                                    <br><br>
                                 <div class="table-responsive">

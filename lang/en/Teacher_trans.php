@@ -21,5 +21,7 @@ return [
     'Specialization_required' =>  'Specialization is required',
     'Joining_Date_required' => 'Joining Date is required',
     'Address_required' => 'address is required',
+    'Question_must_be_separated_by_a_*' => 'Question_must_be_separated_by_a_*'
+
     
 ];

@@ -21,4 +21,5 @@ return [
     'Specialization_required' =>  'التخصص مطلوب',
     'Joining_Date_required' => 'تاريخ الإنضمام مطلوب',
     'Address_required' => 'عنوان المعلم مطلوب',
+    'Question_must_be_separated_by_a_*' => 'يجب فصل بعلامة *بين الأسئلة',
 ];

@@ -37,13 +37,13 @@ use App\Models\Teacher;
             'Name_ar' => 'required|unique:subjects,name,id',
             'Name_en' => 'required|unique:subjects,name,id',
             'Grade_id' => 'required',
-            'classroom_id' => 'required',
+            'Class_id' => 'required',
             'teacher_id' => 'required',
         ],[
             'Name_ar.required' =>trans('Subjects_trans.subject_name_required'),
             'Name_en.required' =>trans('Subjects_trans.subject_name_required'),
             'Grade_id.required' => trans('Accounts.grade_required'),
-            'classroom_id.required' => trans('Accounts.class_name_required'),
+            'Class_id.required' => trans('Accounts.class_name_required'),
             'teacher_id.required' => trans('Teacher_trans.required_name'),
         ]);
        

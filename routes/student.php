@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Students\dashboard\ExamsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,11 @@ Route::group(
     //==============================dashboard============================
     Route::get('/student/dashboard', function () {
         return view('pages.students.dashboard');
-    });
+    })->name('dahsboard.students');
 
+    Route::group(['namespace' => 'App\Http\Controllers\Students\dashboard'], function () {
+        Route::resource('student_exams', ExamsController::class);
+        Route::resource('student_profile', ProfileController::class);
+    });
+    
 });

@@ -151,7 +151,7 @@
                                             <li class="nav-item">
                                                 <a class="nav-link active show" id="students-tab" data-toggle="tab"
                                                    href="#students" role="tab" aria-controls="students"
-                                                   aria-selected="true"> الطلاب</a>
+                                                   aria-selected="true"> {{ trans('Students_trans.students') }}</a>
                                             </li>
 
                                             <li class="nav-item">

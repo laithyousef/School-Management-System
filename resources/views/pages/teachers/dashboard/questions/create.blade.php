@@ -36,7 +36,7 @@
 
                                 <div class="form-row">
                                     <div class="col">
-                                        <label for="title">{{ trans('question_trans.Answer') }}</label>
+                                        <label for="title">{{ trans('question_trans.Answer') }} <span style="color: red; font-size: msaller">{{ trans('Teacher_trans.Question_must_be_separated_by_a_*') }}</span></label>
                                         <textarea name="answers" class="form-control" id="exampleFormControlTextarea1"
                                                   rows="4"></textarea>
                                     </div>

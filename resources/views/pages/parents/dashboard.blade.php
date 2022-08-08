@@ -65,9 +65,9 @@
                                     <h4>{{\App\Models\Student::count()}}</h4>
                                 </div>
                             </div>
-                            {{-- <p class="text-muted pt-3 mb-0 mt-2 border-top">
+                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
                                 <i class="fas fa-binoculars mr-1" aria-hidden="true"></i><a href="{{route('students.index')}}" target="_blank"><span class="text-danger"> </span>{{ trans('admin_dashboard_trans.Show_Data') }}</a>
-                            </p> --}}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -85,9 +85,9 @@
                                     <h4>{{\App\Models\Teacher::count()}}</h4>
                                 </div>
                             </div>
-                            {{-- <p class="text-muted pt-3 mb-0 mt-2 border-top">
+                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
                                 <i class="fas fa-binoculars mr-1" aria-hidden="true"></i><a href="{{route('teachers.index')}}" target="_blank"><span class="text-danger"> </span>{{ trans('admin_dashboard_trans.Show_Data') }}</a>
-                            </p> --}}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -105,9 +105,9 @@
                                     <h4>{{\App\Models\Parents::count()}}</h4>
                                 </div>
                             </div>
-                            {{-- <p class="text-muted pt-3 mb-0 mt-2 border-top">
+                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
                                 <i class="fas fa-binoculars mr-1" aria-hidden="true"></i><a href="{{ url('add_parent') }}" target="_blank"><span class="text-danger"> </span>{{ trans('admin_dashboard_trans.Show_Data') }}</a>
-                            </p> --}}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -125,9 +125,9 @@
                                     <h4>{{\App\Models\Section::count()}}</h4>
                                 </div>
                             </div>
-                            {{-- <p class="text-muted pt-3 mb-0 mt-2 border-top">
+                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
                                 <i class="fas fa-binoculars mr-1" aria-hidden="true"></i><a href="{{route('sections.index')}}" target="_blank"><span class="text-danger"> </span>{{ trans('admin_dashboard_trans.Show_Data') }}</a>
-                            </p> --}}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -137,8 +137,7 @@
 
         
 
-            <livewire:calendar-student /> 
-
+        
             <!--=================================
  wrapper -->
 
@@ -155,8 +154,6 @@
  footer -->
 
     @include('layouts.footer-scripts')
-    @livewireScripts
-    @stack('scripts')
 
 </body>
 

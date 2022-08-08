@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    اضافة اختبار جديد
+   {{trans('quizzes_trans.Add_New_Quiz')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    اضافة اختبار جديد
+   {{trans('quizzes_trans.Add_New_Quiz')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -36,12 +36,12 @@
                                 <div class="form-row">
 
                                     <div class="col">
-                                        <label for="title">اسم الاختبار باللغة العربية</label>
+                                        <label for="title">{{ trans(''quizzes_trans.Quiz_Name_In_Arabic) }}</label>
                                         <input type="text" name="Name_ar" class="form-control">
                                     </div>
 
                                     <div class="col">
-                                        <label for="title">اسم الاختبار باللغة الانجليزية</label>
+                                        <label for="title">{{ trans('quizzes_trans.Quiz_Name_In_English') }}</label>
                                         <input type="text" name="Name_en" class="form-control">
                                     </div>
                                 </div>
@@ -51,9 +51,9 @@
 
                                     <div class="col">
                                         <div class="form-group">
-                                            <label for="Grade_id">المادة الدراسية : <span class="text-danger">*</span></label>
+                                            <label for="Grade_id">{{ trans('Subjects_trans.Subject_Name') }}: <span class="text-danger">*</span></label>
                                             <select class="custom-select mr-sm-2" name="subject_id">
-                                                <option selected disabled>حدد المادة الدراسية...</option>
+                                                <option selected disabled>{{ trans('quizzes_trans.Choose_Subject') }}..</option>
                                                 @foreach($subjects as $subject)
                                                     <option  value="{{ $subject->id }}">{{ $subject->name }}</option>
                                                 @endforeach
@@ -63,9 +63,9 @@
 
                                     <div class="col">
                                         <div class="form-group">
-                                            <label for="Grade_id">اسم المعلم : <span class="text-danger">*</span></label>
+                                            <label for="Grade_id">{{ trans('Subjects_trans.Teacher_Name') }}: <span class="text-danger">*</span></label>
                                             <select class="custom-select mr-sm-2" name="teacher_id">
-                                                <option selected disabled>حدد اسم المعلم...</option>
+                                                <option selected disabled>{{ trans('quizzes_trans.Choose_Teacher_Name') }}...</option>
                                                 @foreach($teachers as $teacher)
                                                     <option  value="{{ $teacher->id }}">{{ $teacher->Name }}</option>
                                                 @endforeach
@@ -111,7 +111,7 @@
                                     </div>
 
                                 </div>
-                                <button class="btn btn-success nextBtn btn-lg pull-right" type="submit">حفظ البيانات</button>
+                                <button class="btn btn-success nextBtn btn-lg pull-right" type="submit">{{ trans('grades_trans.submit') }}</button>
                             </form>
                         </div>
                     </div>
