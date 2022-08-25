@@ -13,7 +13,7 @@ class Parents extends Authenticatable
 {
     use HasFactory, HasTranslations;
 
-    public $translatable = ['Father_Name', 'Father_Job', 'Mother_Name', 'Mother_Job'];
+    public $translatable = ['Name', 'Father_Name', 'Father_Job', 'Mother_Name', 'Mother_Job'];
 
     protected $guarded = [];
 }

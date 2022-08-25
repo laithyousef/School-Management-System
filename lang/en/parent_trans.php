@@ -40,6 +40,13 @@ return [
     'numeric' => 'this field must be numbers only',
     'regex' => 'The phone father format is invalid.',
     'email' => 'The email must be a valid email address',
-
+    'children_list' => 'children list',
+    'attendance_report' => 'attendance report',
+    'evreyone' => 'evreyone',
+    'start_date' => 'start date',
+    'end_date' => 'end date',
+    'from_date' => 'from date',
+    'to_date' => 'to date',
+    'search_information' => 'search information',
 
 ];

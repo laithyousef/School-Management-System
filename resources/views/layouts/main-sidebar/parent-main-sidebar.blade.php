@@ -4,27 +4,39 @@
         <li>
             <a href="{{ route('parents.dashboard') }}">
                 <div class="pull-left"><i class="ti-home"></i><span
-                        class="right-nav-text">{{trans('main_trans.Dashboard')}}</span>
+                        class="right-nav-text">{{trans('main_translate.Dashboard')}}</span>
                 </div>
                 <div class="clearfix"></div>
             </a>
         </li>
         <!-- menu title -->
-        <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">{{trans('main_trans.Programname')}} </li>
+        <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">{{trans('main_translate.Programname')}} </li>
 
 
         <!-- الامتحانات-->
         <li>
-            <a href="{{route('settings.index')}}"><i class="fas fa-book-open"></i><span
+            <a href="{{route('parent.index')}}"><i class="fas fa-book-open"></i><span
                     class="right-nav-text">الأبناء</span></a>
         </li>
 
+          <!-- Settings-->
+          <li>
+            <a href="{{route('son.attendance')}}"><i class="fas fa-id-card-alt"></i><span
+                    class="right-nav-text">تقرير الحضور والغياب</span></a>
+        </li>
 
-        <!-- Settings-->
-        <li>
-            <a href="{{route('settings.index')}}"><i class="fas fa-id-card-alt"></i><span
+          <!-- Settings-->
+          <li>
+            <a href="{{route('son.fees')}}"><i class="fas fa-id-card-alt"></i><span
+                    class="right-nav-text"> تقرير المالية</span></a>
+        </li>
+
+          <!-- Settings-->
+          <li>
+            <a href="{{route('profile.parent.show')}}"><i class="fas fa-id-card-alt"></i><span
                     class="right-nav-text">الملف الشخصي</span></a>
         </li>
+
 
     </ul>
 </div>

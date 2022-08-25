@@ -49,90 +49,53 @@
                     </div>
                 </div>
             </div>
-            <!-- widgets -->
-            <div class="row" >
-                <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
-                    <div class="card card-statistics h-100">
-                        <div class="card-body">
-                            <div class="clearfix">
-                                <div class="float-left">
-                                    <span class="text-success">
-                                        <i class="fas fa-user-graduate highlight-icon" aria-hidden="true"></i>
-                                    </span>
-                                </div>
-                                <div class="float-right text-right">
-                                    <p class="card-text text-dark">{{ trans('admin_dashboard_trans.Number_Of_Students') }}</p>
-                                    <h4>{{\App\Models\Student::count()}}</h4>
-                                </div>
+            <section style="background-color: #eee;">
+                <div class="container py-5">
+                    <div class="row justify-content-center">
+                         @foreach($sons as $son)
+                            <div class="col-md-8 col-lg-6 col-xl-4">
+                                <a href="">
+                                    <div class="card text-black">
+                                        <img src="{{URL::asset('assets/images/my_son.png')}}"/>
+                                        <div class="card-body">
+                                            <div class="text-center">
+                                                <h5 style="font-family: 'Cairo', sans-serif"
+                                                    class="card-title">{{$son->name}}</h5>
+                                                <p class="text-muted mb-4">{{ trans('Students_trans.Student_information') }}</p>
+                                            </div>
+                                            <div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>{{ trans('Accounts.School_Stage') }}
+                                                        </span><span>{{$son->grade->Name}}</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>{{ trans('my_classes.Name_class') }}
+                                                        </span><span>{{$son->classroom->name}}</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>{{ trans('Sections_trans.Name_Section') }}
+                                                        </span><span>{{$son->section->name}}</span>
+                                                </div>
+
+                                                <div class="d-flex justify-content-between">
+                                                   {{-- @if(\App\Models\Degree::where('student_id',$son->id)->count() == 0)
+                                                       <span>عدد الاختبارات</span><span
+                                                           class="text-danger">{{\App\Models\Degree::where('student_id',$son->id)->count()}}</span>
+                                                   @else
+                                                       <span>عدد الاختبارات</span><span
+                                                           class="text-success">{{\App\Models\Degree::where('student_id',$son->id)->count()}}</span>
+                                                   @endif --}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
-                                <i class="fas fa-binoculars mr-1" aria-hidden="true"></i><a href="{{route('students.index')}}" target="_blank"><span class="text-danger"> </span>{{ trans('admin_dashboard_trans.Show_Data') }}</a>
-                            </p>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
-                    <div class="card card-statistics h-100">
-                        <div class="card-body">
-                            <div class="clearfix">
-                                <div class="float-left">
-                                    <span class="text-warning">
-                                        <i class="fas fa-chalkboard-teacher highlight-icon" aria-hidden="true"></i>
-                                    </span>
-                                </div>
-                                <div class="float-right text-right">
-                                    <p class="card-text text-dark">{{ trans('admin_dashboard_trans.Number_Of_Teachers') }}</p>
-                                    <h4>{{\App\Models\Teacher::count()}}</h4>
-                                </div>
-                            </div>
-                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
-                                <i class="fas fa-binoculars mr-1" aria-hidden="true"></i><a href="{{route('teachers.index')}}" target="_blank"><span class="text-danger"> </span>{{ trans('admin_dashboard_trans.Show_Data') }}</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
-                    <div class="card card-statistics h-100">
-                        <div class="card-body">
-                            <div class="clearfix">
-                                <div class="float-left">
-                                    <span class="text-success">
-                                        <i class="fas fa-user-tie highlight-icon" aria-hidden="true"></i>
-                                    </span>
-                                </div>
-                                <div class="float-right text-right">
-                                    <p class="card-text text-dark">{{ trans('admin_dashboard_trans.Number_Of_Parents') }}</p>
-                                    <h4>{{\App\Models\Parents::count()}}</h4>
-                                </div>
-                            </div>
-                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
-                                <i class="fas fa-binoculars mr-1" aria-hidden="true"></i><a href="{{ url('add_parent') }}" target="_blank"><span class="text-danger"> </span>{{ trans('admin_dashboard_trans.Show_Data') }}</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 mb-30">
-                    <div class="card card-statistics h-100">
-                        <div class="card-body">
-                            <div class="clearfix">
-                                <div class="float-left">
-                                    <span class="text-primary">
-                                        <i class="fas fa-chalkboard highlight-icon" aria-hidden="true"></i>
-                                    </span>
-                                </div>
-                                <div class="float-right text-right">
-                                    <p class="card-text text-dark">{{ trans('admin_dashboard_trans.Number_Of_Terms') }}</p>
-                                    <h4>{{\App\Models\Section::count()}}</h4>
-                                </div>
-                            </div>
-                            <p class="text-muted pt-3 mb-0 mt-2 border-top">
-                                <i class="fas fa-binoculars mr-1" aria-hidden="true"></i><a href="{{route('sections.index')}}" target="_blank"><span class="text-danger"> </span>{{ trans('admin_dashboard_trans.Show_Data') }}</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Orders Status widgets-->
+            </section>
+
 
 
         
