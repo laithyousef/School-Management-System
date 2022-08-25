@@ -27,14 +27,14 @@ class childrenController extends Controller
         $students = Student::findOrFail($id);
 
         if ($students->parent_id !== Auth::user()->id) {
-        toastr()->error('يوجد خطا في كود الطالب');
+        toastr()->error(trans('parent_trans.there_is_an_error_in_the_student_code'));
         return redirect()->route('parent.index');
         }
 
         $degrees = Degree::where('student_id', $id)->get();
 
         if ($degrees->isEmpty()) {
-        toastr()->error('لا توجد نتائج لهذا الطالب');
+        toastr()->error(trans('parent_trans.history_formula_must_be'));
         return redirect()->route('parent.index');
         }
      
@@ -54,9 +54,9 @@ class childrenController extends Controller
             'from' => 'required|date|date_format:Y-m-d',
             'to' => 'required|date|date_format:Y-m-d|after_or_equal:from'
         ], [
-            'to.after_or_equal' => 'تاريخ النهاية لابد ان اكبر من تاريخ البداية او يساويه',
-            'from.date_format' => 'صيغة التاريخ يجب ان تكون yyyy-mm-dd',
-            'to.date_format' => 'صيغة التاريخ يجب ان تكون yyyy-mm-dd',
+            'to.after_or_equal' => "{{ trans('parent_trans.the_end_date_must_be_grater_than_the_date_of_beginning') }}",
+            'from.date_format' => "{{ trans('parent_trans.history_formula_must_be') }}",
+            'to.date_format' => "{{ trans('parent_trans.history_formula_must_be') }}",
         ]);
 
         $ids = DB::table('teachers_sections')->where('teacher_id', auth()->user()->id)->pluck('section_id');
@@ -89,14 +89,14 @@ class childrenController extends Controller
     {
         $student = Student::findOrFail($id);
         if ($students->parent_id !== Auth::user()->id) {
-            toastr()->error('يوجد خطا في كود الطالب');
+            toastr()->error(trans('parent_trans.there_is_an_error_in_the_student_code'));
             return redirect()->route('parent.index');
             }
 
 
         $students_receipt = StudentReceipt::where('student_id', $id);
          if ($students_receipt->isEmpty()) {
-        toastr()->error('لا توجد نتائج لهذا الطالب');
+        toastr()->error(trans('parent_trans.history_formula_must_be'));
         return redirect()->route('parent.index');
         }
      

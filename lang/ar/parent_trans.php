@@ -51,6 +51,12 @@ return [
     'from_date' => 'من تاريخ',
     'to_date' => 'الى تاريخ',
     'search_information' => 'معلومات البحث',
+    'there_is_an_error_in_the_student_code' => 'يوجد خطأ في كود الطالب',    
+    'there_are_no_result_for_this_student' => 'لا توجد نتائج لهذا الطالب',
+    'the_end_date_must_be_grater_than_the_date_of_beginning' => 'تاريخ النهاية لابد أن يكون أكبر من تاريخ البداية',
+    'history_formula_must_be' =>  'صيغة التاريخ يجب أن تكون yyyy-mm-dd :',
+
+
 
     
 

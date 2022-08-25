@@ -48,5 +48,9 @@ return [
     'from_date' => 'from date',
     'to_date' => 'to date',
     'search_information' => 'search information',
+    'there_is_an_error_in_the_student_code' => 'there is an error in the student code',
+    'there_are_no_result_for_this_student' => 'there are no result for this student',
+    'the_end_date_must_be_grater_than_the_date_of_beginning' => 'the end date must be greater than the date of beginning',
+    'history_formula_must_be' =>  'history formula must be :',
 
 ];
